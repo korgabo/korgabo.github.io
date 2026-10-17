@@ -1,0 +1,137 @@
+.hero-cta{
+  position:relative;
+  overflow:hidden;
+  z-index:0;
+    padding:150px 0 130px;
+
+}
+
+.hero-blob{
+  position:absolute;
+  top:-25%;
+  right:-18%;
+  width:min(58vw, 760px);
+  height:min(58vw, 760px);
+  border-radius:50%;
+  background:radial-gradient(
+    circle at 32% 30%,
+    rgba(96,165,250,0.45) 0%,
+    rgba(37,99,235,0.2) 45%,
+    rgba(124,58,237,0.08) 70%,
+    transparent 78%
+  );
+  z-index:1;
+  pointer-events:none;
+}
+
+.hero-focus{
+  position:relative;
+  z-index:2;
+}
+
+.hero{
+  padding:96px 0 80px;
+}
+
+.hero-focus{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'Orbitron',sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0;
+}
+
+.eyebrow-dot{
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 3px rgba(37,99,235,0.15), 0 0 8px rgba(37,99,235,0.5);
+  flex-shrink:0;
+}
+
+h1{
+  font-family:'Orbitron',sans-serif;
+  font-weight:700;
+  font-size:clamp(28px, 4.2vw, 44px);
+  line-height:1.2;
+  letter-spacing:0.01em;
+  margin:0;
+  color:var(--ink);
+}
+
+h1 em{
+  font-style:normal;
+  background:linear-gradient(90deg, #22D3EE 0%, var(--accent) 60%, #7C3AED 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-subline{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:clamp(15px, 1.3vw, 17px);
+  line-height:1.6;
+  color:var(--ink);
+  opacity:0.78;
+  margin:0;
+  max-width:52ch;
+}
+
+.hero-subline strong{
+  color:var(--ink);
+  opacity:1;
+  font-weight:600;
+}
+
+.hero-actions{
+  margin-top:8px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 28px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--accent), #7C3AED);
+  color:#fff;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:15px;
+  text-decoration:none;
+  box-shadow:0 10px 24px rgba(37,99,235,0.3);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(37,99,235,0.4);
+}
+
+.button span{
+  transition:transform .2s ease;
+}
+.button:hover span{
+  transform:translateX(3px);
+}
+
