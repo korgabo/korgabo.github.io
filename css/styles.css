@@ -454,6 +454,8 @@ h1.typewriter::after {
     color:var(--muted); margin-bottom:6px; font-weight:600;
   }
   .case-field p{margin:0; font-size:15px; opacity:0.75; font-style:italic;}
+  .case-card--filled .case-field p{font-style:normal; opacity:0.9; line-height:1.6;}
+  .case-card--filled .case-field p + p{margin-top:10px;}
   section{padding:56px 0; border-top:1px solid var(--line);}
   h2{font-family:'Orbitron',sans-serif; font-weight:600; font-size:26px; margin:0 0 12px; letter-spacing:-0.04em;}
   .section-intro{max-width:58ch; opacity:0.78; margin-bottom:36px; font-size:16px; line-height:1.7;}
