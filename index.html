@@ -291,55 +291,117 @@ Az első nagy döntés az, hogy belevágsz e a folyamatba. Majd utána nem egy n
     <div id="cards"></div>
   </section>
 
-  <section>
+  <section id="esettanulmanyok">
     <h2>Esettanulmányok</h2>
-    <p class="section-intro">Váz a konkrét projektekhez — ide kerülnek majd a valós számok, screenshotok és eredmények.</p>
+    <p class="section-intro">Valós projektek: mi volt a helyzet, mit csináltam, és mi lett belőle.</p>
 
-    <div class="case-card case-card--filled">
-      <div class="tag">Esettanulmány 01 · GEO</div>
-      <h3>Vezér Állategészségügyi Centrum — GEO javítás</h3>
-      <div class="case-grid">
-        <div class="case-field"><b>Kihívás</b><p>A centrum nem jelent meg, amikor valaki AI-asszisztenstől (ChatGPT, Gemini) kért debreceni állatorvos-ajánlást. A keresők hibás adatokból tanultak, ezért kimaradt a válaszokból.</p></div>
-        <div class="case-field"><b>Megoldás</b>
-          <p><strong>Google Cégprofil:</strong> a link rossz oldalra mutatott, és a keresők ebből tanultak. Javítottam.</p>
-          <p><strong>robots.txt:</strong> a hibás beállítás gátolta a feltérképezést. Újraírtam.</p>
-          <p><strong>Bing-indexelés:</strong> az oldal nem volt a Bing indexében, amire a ChatGPT keresése részben épül. Beküldtem, és ellenőriztem, hogy bekerült.</p>
-        </div>
-        <div class="case-field"><b>Eredmény</b><p>A Gemini a „debreceni állatorvos” kérdésre <strong>első helyen</strong> ajánlja a centrumot, és a ChatGPT is a javaslatai közé vette (5. hely).</p></div>
-      </div>
-      <div class="case-shots">
-        <figure><a href="images/vezer-gemini.jpg" target="_blank" rel="noopener"><img src="images/vezer-gemini.jpg" alt="Gemini válasza: első helyen a Vezér Állategészségügyi Centrum" loading="lazy"></a><figcaption>Gemini — 1. hely</figcaption></figure>
-        <figure><a href="images/vezer-chatgpt.jpg" target="_blank" rel="noopener"><img src="images/vezer-chatgpt.jpg" alt="ChatGPT válasza: a Vezér Állategészségügyi Centrum az ajánlások között" loading="lazy"></a><figcaption>ChatGPT — 5. hely</figcaption></figure>
-      </div>
-    </div>
+    <article class="case">
+      <header class="case-head">
+        <div class="case-tag"><span class="case-num">01</span>GEO · Láthatóság az AI-keresőkben</div>
+        <h3>Vezér Állategészségügyi Centrum</h3>
+        <p class="case-lead">Egy debreceni állatkórház, amit az AI-asszisztensek nem ajánlottak — három technikai javítás után már igen.</p>
+      </header>
 
-    <div class="case-card case-card--filled">
-      <div class="tag">Esettanulmány 02 · Termékfejlesztés</div>
-      <h3>Botműhely — SaaS fejlesztés prototípustól a tiszta újrakezdésig</h3>
-      <div class="case-grid">
-        <div class="case-field"><b>Kihívás</b><p>Egy magyar chatbot-szolgáltatás ötletét kellett gyorsan kipróbálni, majd olyan alapra helyezni, ami hosszú távon bővíthető és fenntartható — fejlesztőcsapat nélkül, AI-val építve.</p></div>
-        <div class="case-field"><b>Megoldás</b>
-          <p><strong>Prototípus:</strong> sandboxban épült egy működő változat Next.js és PostgreSQL alapon. Ebből derült ki, mire van valójában szükség, és hol akad el a felépítés.</p>
-          <p><strong>Terv:</strong> a tanulságokból teljes termékterv készült: MVP-hatókör, adatmodell, árazás, és egy döntésnapló, amiben minden döntés indoklással szerepel.</p>
-          <p><strong>Újrakezdés:</strong> a kész tervvel tiszta repóban, nulláról indult az építés. Az AI-nak szabályfájl rögzíti a kódszerkezetet és a minőségi elvárásokat, az MVP be van fagyasztva, és minden kódváltozás után automatikus tesztek futnak.</p>
-        </div>
-        <div class="case-field"><b>Eredmény</b><p>Két hét alatt elkészült az MVP magja egy rendezett, bővíthető kódbázison, ahol egy új funkció új modult jelent, nem átépítést. A prototípus tanulságai megmaradtak, a hibái nem kerültek át.</p></div>
+      <div class="case-stats">
+        <div class="case-stat"><span class="case-stat-num">1.</span><span class="case-stat-label">hely a Geminiben</span></div>
+        <div class="case-stat"><span class="case-stat-num">5.</span><span class="case-stat-label">hely a ChatGPT-ben</span></div>
       </div>
-    </div>
 
-    <div class="case-card case-card--filled">
-      <div class="tag">Esettanulmány 03 · Folyamatautomatizálás</div>
-      <h3>Egyedi Excel- és Sheets-megoldások a hatékonyabb munkavégzésért</h3>
-      <div class="case-grid">
-        <div class="case-field"><b>Kihívás</b><p>A munkahelyi adminisztráció egy része ismétlődő, kézi műveletekből állt: elemek kiválogatása hosszú listákból, feladatok nyomon követése szétszórt jegyzetekben. Ez lassú volt, és könnyen csúszott be hiba.</p></div>
-        <div class="case-field"><b>Megoldás</b>
-          <p><strong>Makrós válogató:</strong> Excel-makrókkal épített mini program, ami egy listából a megadott feltételek szerint egy gombnyomásra kiválogatja a szükséges elemeket — kézi szűrés és másolgatás helyett.</p>
-          <p><strong>Feladatkezelő napló:</strong> Google Sheets-alapú, kis programként működő napló, amiben a feladatok egy helyen, egységes formában rögzíthetők és követhetők.</p>
-          <p>Mindkettőt úgy építettem, hogy a kollégák is használni tudják, külön betanítás nélkül.</p>
+      <div class="case-body">
+        <div class="case-col">
+          <h4>Kiinduló helyzet</h4>
+          <p>Ha valaki a ChatGPT-től vagy a Geminitől kért debreceni állatorvos-ajánlást, a centrum kimaradt a válaszokból. A keresők hibás adatokból tanultak róla.</p>
         </div>
-        <div class="case-field"><b>Eredmény</b><p>Az ismétlődő lépések egy-egy gombnyomásra vagy egy közös táblázatra szűkültek, így a munkafolyamat gyorsabb és kevésbé hibára hajlamos. A megoldások elkészültek, az éles próba most indul — a mért időmegtakarítás ide kerül, amint megvannak az első adatok.</p></div>
+        <div class="case-col">
+          <h4>Mit csináltam</h4>
+          <ol class="case-steps">
+            <li><b>Google Cégprofil</b>A link rossz oldalra mutatott, és a keresők ebből tanultak. Javítottam.</li>
+            <li><b>robots.txt</b>A hibás beállítás gátolta a feltérképezést. Újraírtam.</li>
+            <li><b>Bing-indexelés</b>Az oldal nem volt a Bing indexében, amire a ChatGPT keresése részben épül. Beküldtem és ellenőriztem.</li>
+          </ol>
+        </div>
       </div>
-    </div>
+
+      <div class="case-result">
+        <h4>Eredmény</h4>
+        <p>A „debreceni állatorvos” kérdésre a Gemini első helyen ajánlja a centrumot, és a ChatGPT is a javaslatai közé vette.</p>
+        <div class="case-shots">
+          <figure><a href="images/vezer-gemini.jpg" target="_blank" rel="noopener"><img src="images/vezer-gemini.jpg" alt="Gemini válasza: első helyen a Vezér Állategészségügyi Centrum" loading="lazy"></a><figcaption>Gemini — 1. hely</figcaption></figure>
+          <figure><a href="images/vezer-chatgpt.jpg" target="_blank" rel="noopener"><img src="images/vezer-chatgpt.jpg" alt="ChatGPT válasza: a Vezér Állategészségügyi Centrum az ajánlások között" loading="lazy"></a><figcaption>ChatGPT — 5. hely</figcaption></figure>
+        </div>
+      </div>
+
+      <ul class="case-chips"><li>Google Cégprofil</li><li>robots.txt</li><li>Bing Webmaster Tools</li><li>GEO</li></ul>
+    </article>
+
+    <article class="case">
+      <header class="case-head">
+        <div class="case-tag"><span class="case-num">02</span>Termékfejlesztés · SaaS</div>
+        <h3>Botműhely</h3>
+        <p class="case-lead">Chatbot-szolgáltatás magyar vállalkozásoknak — prototípustól a tervezett, tiszta újrakezdésig.</p>
+      </header>
+
+      <div class="case-stats">
+        <div class="case-stat"><span class="case-stat-num">2 hét</span><span class="case-stat-label">az MVP magjáig</span></div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-col">
+          <h4>Kiinduló helyzet</h4>
+          <p>Egy chatbot-szolgáltatás ötletét kellett gyorsan kipróbálni, majd olyan alapra helyezni, ami hosszú távon bővíthető és fenntartható — fejlesztőcsapat nélkül.</p>
+        </div>
+        <div class="case-col">
+          <h4>Mit csináltam</h4>
+          <ol class="case-steps">
+            <li><b>Prototípus</b>Sandboxban épült egy működő változat Next.js és PostgreSQL alapon. Ebből derült ki, mire van valójában szükség, és hol akad el a felépítés.</li>
+            <li><b>Terv</b>A tanulságokból teljes termékterv: MVP-hatókör, adatmodell, árazás, és döntésnapló, amiben minden döntés indoklással szerepel.</li>
+            <li><b>Újrakezdés</b>A kész tervvel tiszta repóban, nulláról: rögzített kódolási szabályok, befagyasztott MVP, minden kódváltozás után automatikus tesztek.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="case-result">
+        <h4>Eredmény</h4>
+        <p>Rendezett, bővíthető kódbázis, ahol egy új funkció új modult jelent, nem átépítést. A prototípus tanulságai megmaradtak, a hibái nem kerültek át.</p>
+      </div>
+
+      <ul class="case-chips"><li>Next.js</li><li>PostgreSQL</li><li>Supabase</li><li>Automatikus tesztek</li></ul>
+    </article>
+
+    <article class="case">
+      <header class="case-head">
+        <div class="case-tag"><span class="case-num">03</span>Folyamatautomatizálás</div>
+        <h3>Egyedi Excel- és Sheets-megoldások</h3>
+        <p class="case-lead">Mini programok a munkahelyi adminisztráció ismétlődő lépéseire — a magam és a kollégáim munkájához.</p>
+      </header>
+
+      <div class="case-stats">
+        <div class="case-stat"><span class="case-stat-num">2</span><span class="case-stat-label">saját fejlesztésű eszköz</span></div>
+        <div class="case-stat"><span class="case-stat-num">1 gomb</span><span class="case-stat-label">a kézi válogatás helyett</span></div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-col">
+          <h4>Kiinduló helyzet</h4>
+          <p>Az adminisztráció egy része ismétlődő, kézi műveletekből állt: elemek kiválogatása hosszú listákból, feladatok követése szétszórt jegyzetekben. Lassú volt, és könnyen csúszott be hiba.</p>
+        </div>
+        <div class="case-col">
+          <h4>Mit csináltam</h4>
+          <ol class="case-steps">
+            <li><b>Makrós válogató</b>Excel-makrókkal épített mini program, ami egy listából a megadott feltételek szerint egy gombnyomásra kiválogatja a szükséges elemeket.</li>
+            <li><b>Feladatkezelő napló</b>Google Sheets-alapú napló, amiben a feladatok egy helyen, egységes formában rögzíthetők és követhetők.</li>
+            <li><b>Kollégáknak is</b>Mindkettő úgy készült, hogy külön betanítás nélkül használható legyen.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="case-result">
+        <h4>Eredmény</h4>
+        <p>Az ismétlődő lépések egy gombnyomásra vagy egy közös táblázatra szűkültek. A megoldások elkészültek, az éles próba most indul — a mért időmegtakarítás ide kerül, amint megvannak az első adatok.</p>
+      </div>
+
+      <ul class="case-chips"><li>Excel VBA</li><li>Google Sheets</li><li>Automatizálás</li></ul>
+    </article>
   </section>
 
   <section>

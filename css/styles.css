@@ -439,28 +439,67 @@ h1.typewriter::after {
 /* =========================
    CASE STUDIES / CARDS
    ========================= */
-  .case-card{
-    border:1px solid var(--line); border-radius:18px; padding:26px 24px; margin-bottom:16px;
-    background:rgba(255,255,255,0.18); box-shadow:0 10px 24px rgba(23,26,29,0.02);
+  /* Esettanulmányok */
+  .case{
+    border:1px solid var(--line); border-radius:20px; padding:30px 28px; margin-bottom:22px;
+    background:rgba(255,255,255,0.22); box-shadow:0 12px 30px rgba(15,23,42,0.04);
   }
-  .case-card .tag{
-    font-family:'Space Grotesk',sans-serif; font-size:12px; color:var(--accent); font-weight:700; margin-bottom:10px; letter-spacing:0.12em; text-transform:uppercase;
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .case{background:rgba(255,255,255,0.03);} }
+  :root[data-theme="dark"] .case{background:rgba(255,255,255,0.03);}
+  .case-tag{
+    display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-size:12px;
+    font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;
   }
-  .case-card h3{font-family:'orbitron',sans-serif; font-size:19px; font-weight:600; margin:0 0 16px;}
-  .case-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
-  @media (max-width:640px){ .case-grid{grid-template-columns:1fr;} }
-  .case-field b{
-    display:block; font-family:'Space Grotesk',sans-serif; font-size:12.5px;
-    color:var(--muted); margin-bottom:6px; font-weight:600;
+  .case-num{
+    display:inline-grid; place-items:center; min-width:30px; height:24px; padding:0 8px; border-radius:999px;
+    background:var(--accent); color:#fff; letter-spacing:0.04em;
   }
-  .case-field p{margin:0; font-size:15px; opacity:0.75; font-style:italic;}
-  .case-card--filled .case-field p{font-style:normal; opacity:0.9; line-height:1.6;}
-  .case-card--filled .case-field p + p{margin-top:10px;}
-  .case-shots{display:flex; flex-wrap:wrap; gap:14px; margin-top:20px; align-items:flex-start;}
+  .case-head h3{font-family:'Orbitron',sans-serif; font-size:22px; font-weight:600; margin:0 0 8px; letter-spacing:-0.02em;}
+  .case-lead{margin:0; max-width:62ch; font-size:16px; line-height:1.6; color:var(--muted);}
+
+  .case-stats{display:flex; flex-wrap:wrap; gap:12px; margin:22px 0 26px;}
+  .case-stat{
+    display:flex; flex-direction:column; gap:2px; padding:12px 18px; border-radius:14px;
+    background:var(--teal-soft); border:1px solid var(--line); flex:1 1 120px; max-width:210px; box-sizing:border-box;
+  }
+  .case-stat-num{font-family:'Orbitron',sans-serif; font-size:24px; font-weight:600; color:var(--accent); line-height:1.15;}
+  .case-stat-label{font-family:'Space Grotesk',sans-serif; font-size:13px; color:var(--muted);}
+
+  .case h4{
+    font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:700; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 10px;
+  }
+  .case-body{display:grid; grid-template-columns:1fr 1.5fr; gap:32px;}
+  @media (max-width:720px){ .case-body{grid-template-columns:1fr; gap:22px;} }
+  .case-col p{margin:0; font-size:15.5px; line-height:1.65;}
+
+  .case-steps{list-style:none; margin:0; padding:0; counter-reset:step; display:grid; gap:14px;}
+  .case-steps li{position:relative; padding-left:38px; font-size:15px; line-height:1.6; counter-increment:step;}
+  .case-steps li::before{
+    content:counter(step); position:absolute; left:0; top:1px; width:26px; height:26px; border-radius:50%;
+    display:grid; place-items:center; font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700;
+    color:var(--accent); border:1.5px solid var(--accent);
+  }
+  .case-steps b{display:block; font-weight:600; margin-bottom:2px;}
+
+  .case-result{
+    margin-top:26px; padding:18px 22px; border-left:3px solid var(--accent); border-radius:0 14px 14px 0;
+    background:linear-gradient(90deg, rgba(37,99,235,0.08), rgba(37,99,235,0));
+  }
+  .case-result h4{color:var(--accent);}
+  .case-result p{margin:0; font-size:15.5px; line-height:1.65; max-width:70ch;}
+
+  .case-chips{list-style:none; margin:20px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px;}
+  .case-chips li{
+    font-family:'Space Grotesk',sans-serif; font-size:12.5px; padding:5px 12px; border-radius:999px;
+    border:1px solid var(--line); color:var(--muted);
+  }
+
+  .case-shots{display:flex; flex-wrap:wrap; gap:14px; margin-top:16px; align-items:flex-start;}
   .case-shots figure{margin:0;}
   .case-shots a{display:block;}
-  .case-shots img{display:block; max-height:160px; height:auto; width:auto; max-width:100%; border:1px solid var(--line); border-radius:10px;}
-  @media (max-width:640px){ .case-shots img{max-height:130px;} }
+  .case-shots img{display:block; max-height:140px; height:auto; width:auto; max-width:100%; border:1px solid var(--line); border-radius:10px;}
+  @media (max-width:640px){ .case-shots img{max-height:130px;} .case{padding:24px 18px;} .case-stat{padding:12px 14px;} .case-stat-label{hyphens:manual;} }
   .case-shots figcaption{font-family:'Space Grotesk',sans-serif; font-size:12.5px; color:var(--muted); margin-top:6px;}
   section{padding:56px 0; border-top:1px solid var(--line);}
   h2{font-family:'Orbitron',sans-serif; font-weight:600; font-size:26px; margin:0 0 12px; letter-spacing:-0.04em;}
