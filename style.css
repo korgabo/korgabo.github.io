@@ -1,0 +1,32 @@
+:root {
+  color-scheme: light dark;
+  --paper: #F7F8FA;
+  --ink: #111827;
+  --accent: #2563EB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #111827;
+    --ink: #F8FAFC;
+    --accent: #60A5FA;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+main {
+  max-width: 640px;
+  margin: 64px auto;
+  padding: 0 16px;
+}
+
+a {
+  color: var(--accent);
+}
